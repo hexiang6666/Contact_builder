@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -f "$1" ]
+then
+	export FILE_DIR=$PWD 
+	cd $INSTALL_DIR
+	cp ./SRC/Makefile_reserve Makefile
+	echo 'ELEMENT_NAME='$1 | cat - Makefile > temp && mv temp Makefile
+	echo 'NODE_NAME='$2 | cat - Makefile > temp && mv temp Makefile
+	echo 'FILE_DIR'=$FILE_DIR | cat - Makefile > temp && mv temp Makefile
+	echo 'Reading files.... Completed!'
+else
+	cd $INSTALL_DIR
+	make -f $INSTALL_DIR/Makefile $1
+fi
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "define x-right boundary,followed by [ENTER]"
+read right
+echo 'surface_boundary_coordinate_right_x ='$right | cat - $PWD/SRC/main.m > $PWD/SRC/temp && mv $PWD/SRC/temp $PWD/SRC/main.m
+echo define x-left boundary,followed by [ENTER]
+read left
+echo 'surface_boundary_coordinate_left_x ='$left | cat - $PWD/SRC/main.m > $PWD/SRC/temp && mv $PWD/SRC/temp $PWD/SRC/main.m
+echo "define y-front boundary,followed by [ENTER]"
+read front
+echo 'surface_boundary_coordinate_front_y='$front | cat - $PWD/SRC/main.m > $PWD/SRC/temp && mv $PWD/SRC/temp $PWD/SRC/main.m
+echo "define y-back boundary,followed by [ENTER]"
+read back
+echo 'surface_boundary_coordinate_back_y='$back | cat - $PWD/SRC/main.m > $PWD/SRC/temp && mv $PWD/SRC/temp $PWD/SRC/main.m
+echo "define z-top boundary,followed by [ENTER]"
+read top_z
+echo 'surface_boundary_coordinate_up_z ='$top_z | cat - $PWD/SRC/main.m > $PWD/SRC/temp && mv $PWD/SRC/temp $PWD/SRC/main.m
+echo "define z-bottom boundary,followed by [ENTER]"
+read bottom
+echo 'surface_boundary_coordinate_down_z='$bottom | cat - $PWD/SRC/main.m > $PWD/SRC/temp && mv $PWD/SRC/temp $PWD/SRC/main.m
+echo "Down with location setting of contact surface"
