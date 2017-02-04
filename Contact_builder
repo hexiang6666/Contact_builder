@@ -8,8 +8,14 @@ then
 	echo 'ELEMENT_NAME='$1 | cat - Makefile > temp && mv temp Makefile
 	echo 'NODE_NAME='$2 | cat - Makefile > temp && mv temp Makefile
 	echo 'FILE_DIR'=$FILE_DIR | cat - Makefile > temp && mv temp Makefile
+	echo 'INSTALL_DIR'=$INSTALL_DIR | cat - Makefile > temp && mv temp Makefile
 	echo 'Reading files.... Completed!'
 else
-	cd $INSTALL_DIR; make -f $INSTALL_DIR/Makefile $1
+	if [ "$1" = "remove" ]
+	then
+		cd ~ ; make -f $INSTALL_DIR/Makefile $1
+	else
+		cd $INSTALL_DIR; make -f $INSTALL_DIR/Makefile $1
+	fi
 fi
 

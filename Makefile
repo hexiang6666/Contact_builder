@@ -51,9 +51,7 @@ clean: $(FILE_DIR)/builder   ##@Default delete running result.
 		@echo "Cleaning...Created files has been deleted"
 
 remove: ##@Default uninstall Contact_builder.
-		@cd $(INSTALL_DIR)/SRC; rm *
-		@cd $(INSTALL_DIR)/Example; rm *
-		@cd $(INSTALL_DIR); rmdir $(INSTALL_DIR)/SRC ; rmdir $(INSTALL_DIR)/Example ; rm * ;
+		@rm -rf $(INSTALL_DIR)
 		@sudo rm /usr/local/bin/Contact_builder
 		@echo  "Contact_builder has been completely removed from your computer!"  
 
