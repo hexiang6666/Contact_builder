@@ -1,4 +1,4 @@
-function [ flag ] = write_add_element(contact_element,No_elemnet,new_element)
+wfunction [ flag ] = write_add_element(contact_element,No_elemnet,new_element)
 %write input add contact fei file
 flag=0;
 index=[(No_elemnet+1):1:(size(contact_element,1)+No_elemnet)]';
@@ -8,9 +8,9 @@ index=[(No_elemnet+1):1:(size(contact_element,1)+No_elemnet)]';
 
 	formatSpec1='add element #  %8.0d type 27NodeBrick with nodes(%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d,%8.0d) use material # %8.0d; \n';
 	fprintf(fileID,formatSpec1,new_element');
-	
-	fprintf(fileID,'Writing original elements down. The following are conatct elements\n');
-	
+	fprintf(fileID,'\n');
+	fprintf(fileID,'//Writing original elements down. The following are conatct elements\n');
+	fprintf(fileID,'\n');
 	formatSpec2='add element #%8.0d type FrictionalPenaltyContact with nodes (%8.0d,%8.0d) normal_stiffness=kn tangential_stiffness=kt normal_damping=cn tangential_damping=ct friction_ratio=fr contact_plane_vector=(%8.4f,%8.4f,%8.4f);\n';
 	
 	fprintf(fileID,formatSpec2,write_contact_element');    %matlab is column-first.
