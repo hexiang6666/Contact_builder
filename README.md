@@ -71,6 +71,6 @@ make install
 ---
 [UCD CompGeoMech](http://sokocalo.engr.ucdavis.edu/~jeremic/)
 
-Created by: [Sumeet Kumar Sinha](http://www.sumeetksinha.com)
+Created by: [Hexiang Wang]
 
 Request for adding features on sumeet.kumar507@gmail.com
