@@ -1,4 +1,4 @@
-wfunction [ flag ] = write_add_element(contact_element,No_elemnet,new_element)
+function [ flag ] = write_add_element(contact_element,No_elemnet,new_element)
 %write input add contact fei file
 flag=0;
 index=[(No_elemnet+1):1:(size(contact_element,1)+No_elemnet)]';
