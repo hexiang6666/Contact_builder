@@ -73,4 +73,4 @@ make install
 
 Created by: [Hexiang Wang]
 
-Request for adding features on sumeet.kumar507@gmail.com
+Request for adding features and bug reports on hexwang@ucdavis.edu
