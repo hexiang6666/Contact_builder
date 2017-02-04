@@ -48,6 +48,6 @@ clean: $(FILE_DIR)/builder
 		@rm -r $(FILE_DIR)/builder
 
 remove: $(CURRENT_DIR)
-		@rm -r $(CURRENT_DIR)
+		@sudo rm -rf $(CURRENT_DIR)
 		@sudo rm /usr/local/bin/Contact_builder
 		@echo  "Contact_builder has been completely removed from your computer!"  
