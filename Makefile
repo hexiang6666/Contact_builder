@@ -46,6 +46,7 @@ install: Contact_builder
 
 clean: $(FILE_DIR)/builder
 		@rm -r $(FILE_DIR)/builder
+		@echo "Cleaning...Created files has been deleted"
 
 remove: $(CURRENT_DIR)
 		@sudo rm -rf $(CURRENT_DIR)
