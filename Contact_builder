@@ -10,7 +10,6 @@ then
 	echo 'FILE_DIR'=$FILE_DIR | cat - Makefile > temp && mv temp Makefile
 	echo 'Reading files.... Completed!'
 else
-	cd $INSTALL_DIR
-	make -f $INSTALL_DIR/Makefile $1
+	cd $INSTALL_DIR; make -f $INSTALL_DIR/Makefile $1
 fi
 
