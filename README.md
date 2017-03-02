@@ -1,7 +1,7 @@
 Contact_builder 2.3
 ==================
 ### Description
-Contatc_builder is a programm that can add contatc element for computational model of [RealESSI] (http://sokocalo.engr.ucdavis.edu/~jeremic/Real_ESSI_Simulator/)(UC Davis Realistic Earthquake Soil Structure Interaction). Currently this programme is written for 27 node brick element. 
+Contatc_builder is a programm that can add contatc element for computational model of [RealESSI] (http://sokocalo.engr.ucdavis.edu/~jeremic/Real_ESSI_Simulator/)(UC Davis Realistic Earthquake Soil Structure Interaction). Currently this programme is written to add contact for 8 node brick and 27 node brick element. 
 
 ### Installation
 
@@ -24,9 +24,9 @@ sudo apt-get install liboctave-pkg-dev
 sudo apt-get install liboctave-dev 
 ```
 
-#### Compiling gmESSI translator
+#### Compiling Contact_builder
 
-1) Get the latest version of gmESSI from github
+1) Get the latest version of Contact_builder from github
 
 ```bash
 git clone https://github.com/SumeetSinha/gmESSI.git
